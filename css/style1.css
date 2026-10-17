@@ -1,0 +1,670 @@
+/* ==========================================================================
+   1. CORE GLOBAL VARIABLES & MULTI-THEME CONFIGURATION
+   ========================================================================== */
+
+/* Baseline Default: 🌌 DARK SPACE THEME */
+:root, body[data-theme="dark"] {
+  --bg-deep: #0b0f19;       
+  --bg-card: #151d30;       
+  --bg-input: #1e2942;      
+  --text-main: #f8fafc;     
+  --text-muted: #94a3b8;    
+  --primary: #ef4444;        
+  --primary-glow: rgba(239, 68, 68, 0.25);
+  --success: #10b981;       
+  --border-color: #24324f;
+  --label-color: #ff7700;    /* Solid Digital Orange baseline */
+  --max-width: 1400px;
+  --radius-lg: 14px;
+  --radius-md: 8px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --text-gradient: none;
+}
+
+/* Modifier Profile: ☀️ CLEAN LIGHT THEME */
+body[data-theme="light"] {
+  --bg-deep: #f1f5f9;       
+  --bg-card: #ffffff;       
+  --bg-input: #e2e8f0;      
+  --text-main: #0f172a;     
+  --text-muted: #64748b;    
+  --primary: #dc2626;        
+  --primary-glow: rgba(220, 38, 38, 0.15);
+  --border-color: #cbd5e1;
+  --label-color: #d97706;    /* Highly legible dark amber for light backgrounds */
+}
+
+/* Modifier Profile: ⚡ CYBER CRIMSON NEON THEME (Red and Orange) */
+body[data-theme="neon"] {
+  --bg-deep: #000000;       
+  --bg-card: #0d0d0d;       
+  --bg-input: #1a1a1a;      
+  --text-main: #ff7700;      /* Fixed: Shifted baseline from Green to Cyber Orange */
+  --text-muted: #a6a6a6;    
+  --primary: #ff003c;        /* High-voltage Neon Red */
+  --primary-glow: rgba(255, 0, 60, 0.5);
+  --border-color: #ff003c;   
+  --label-color: #ff7700;    
+}
+
+/* Modifier Profile: 💎 TRON AQUA NEON THEME */
+body[data-theme="neon-aqua"] {
+  --bg-deep: #020813;       
+  --bg-card: #061124;       
+  --bg-input: #0b1a35;      
+  --text-main: #00f2ff;      /* Electric Cyan */
+  --text-muted: #007799;    
+  --primary: #3b82f6;        /* Deep Neon Blue */
+  --primary-glow: rgba(59, 130, 246, 0.6);
+  --border-color: #00f2ff;
+  --label-color: #00f2ff;
+}
+
+/* Modifier Profile: 🔮 SYNTH PURPLE NEON THEME */
+body[data-theme="neon-purple"] {
+  --bg-deep: #0b001a;       
+  --bg-card: #14012e;       
+  --bg-input: #23024f;      
+  --text-main: #df20ff;      /* Laser Magenta */
+  --text-muted: #995ca7;    
+  --primary: #bd00ff;        /* Neon Purple */
+  --primary-glow: rgba(189, 0, 255, 0.55);
+  --border-color: #bd00ff;
+  --label-color: #df20ff;
+}
+
+/* Modifier Profile: ☢️ AMBER TERMINAL NEON THEME */
+body[data-theme="neon-amber"] {
+  --bg-deep: #050300;       
+  --bg-card: #120b00;       
+  --bg-input: #1f1402;      
+  --text-main: #ffb700;      /* CRT Phosphor Gold */
+  --text-muted: #aa8122;    
+  --primary: #ff9100;        /* Hot Amber */
+  --primary-glow: rgba(255, 145, 0, 0.5);
+  --border-color: #ff9100;
+  --label-color: #ffb700;
+}
+
+/* Modifier Profile: 🔋 LIME MATRIX NEON THEME */
+body[data-theme="neon-lime"] {
+  --bg-deep: #000502;
+  --bg-card: #001408;
+  --bg-input: #00240e;
+  --text-main: #39ff14;      /* Cyber Lime */
+  --text-muted: #1b8a1b;
+  --primary: #059669;        /* Deep Emerald Glow */
+  --primary-glow: rgba(5, 150, 105, 0.6);
+  --border-color: #39ff14;
+  --label-color: #39ff14;
+}
+
+/* Modifier Profile: 🌸 LASER PINK NEON THEME */
+body[data-theme="neon-hotpink"] {
+  --bg-deep: #0a0005;
+  --bg-card: #1c0010;
+  --bg-input: #2d001a;
+  --text-main: #ffffff;      /* Balanced high-contrast white */
+  --text-muted: #c97da7;
+  --primary: #ff007f;        /* Shocking Hot Pink */
+  --primary-glow: rgba(255, 0, 127, 0.65);
+  --border-color: #ff007f;
+  --label-color: #ff007f;
+}
+
+/* Modifier Profile: ⚡ ELECTRIC GOLD NEON THEME */
+body[data-theme="neon-electric"] {
+  --bg-deep: #00020d;
+  --bg-card: #000933;
+  --bg-input: #001266;
+  --text-main: #ffee00;      /* Electric Yellow */
+  --text-muted: #7382c7;
+  --primary: #2563eb;        /* High-Voltage Cobalt Blue */
+  --primary-glow: rgba(37, 99, 235, 0.6);
+  --border-color: #ffee00;
+  --label-color: #ffee00;
+}
+
+/* Modifier Profile: 🔥 SOLAR FLARE NEON THEME */
+body[data-theme="neon-coral"] {
+  --bg-deep: #0a0200;
+  --bg-card: #1f0b05;
+  --bg-input: #33130a;
+  --text-main: #ffdd00;      /* Neon Yellow text highlights */
+  --text-muted: #b86248;
+  --primary: #ff4500;        /* Flame Orange-Red */
+  --primary-glow: rgba(255, 69, 0, 0.6);
+  --border-color: #ff4500;
+  --label-color: #ffdd00;
+}
+
+/* Modifier Profile: 🌴 MIAMI SUNSET NEON THEME */
+body[data-theme="neon-miami"] {
+  --bg-deep: #0a0014;
+  --bg-card: #1b002a;
+  --bg-input: #2b0042;
+  --text-main: #00f5d4;      /* Cyberpunk Teal */
+  --text-muted: #a15299;
+  --primary: #7b2cbf;        /* Neon Purple accents */
+  --primary-glow: rgba(123, 44, 191, 0.6);
+  --border-color: #00f5d4;
+  --label-color: #ff007f;    /* Punchy pink headers */
+}
+
+/* Modifier Profile: 👾 TOXIC ALIEN NEON THEME */
+body[data-theme="neon-glitch"] {
+  --bg-deep: #08000c;
+  --bg-card: #120020;
+  --bg-input: #1e0033;
+  --text-main: #adff2f;      /* Green Yellow Radioactivity */
+  --text-muted: #824ba3;
+  --primary: #9400d3;        /* Dark Violet Neon */
+  --primary-glow: rgba(148, 0, 211, 0.65);
+  --border-color: #adff2f;
+  --label-color: #adff2f;
+}
+
+/* Modifier Profile: ❄️ GLACIAL ICE NEON THEME */
+body[data-theme="neon-ice"] {
+  --bg-deep: #00050a;
+  --bg-card: #001220;
+  --bg-input: #00223d;
+  --text-main: #e0f7fa;      /* Frozen light cyan tint */
+  --text-muted: #546e7a;
+  --primary: #80deea;        /* Pure Ice Crystal Blue */
+  --primary-glow: rgba(128, 222, 234, 0.5);
+  --border-color: #80deea;
+  --label-color: #80deea;
+}
+
+/* ==========================================================================
+   🌈 MULTI-NEON SPECTRUM MASTER THEME
+   ========================================================================== */
+body[data-theme="neon-spectrum"] {
+  --bg-deep: #000000;
+  --bg-card: #080808;
+  --bg-input: #121212;
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  --primary: #ff007f;
+  --primary-glow: rgba(0, 242, 255, 0.4);
+  --border-color: #333333;
+  --label-color: #ffaa00;
+  
+  /* Advanced Dynamic Component Binding Variables */
+  --text-gradient: linear-gradient(45deg, #ff007f, #7b2cbf, #00f2ff, #39ff14);
+}
+
+/* Custom layout binding for spectrum text strings */
+body[data-theme="neon-spectrum"] .output-string {
+  background: var(--text-gradient);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 700;
+}
+
+body[data-theme="neon-spectrum"] .font-card:hover {
+  border-image: linear-gradient(45deg, #ff007f, #00f2ff) 1;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+/* ==========================================================================
+   2. CORE ARCHITECTURE RESET & LAYOUT SYSTEMS
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-y: scroll;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ==========================================================================
+   3. APP CONTAINER & DYNAMIC INTERACTIVE HEADER PACKS
+   ========================================================================== */
+.app-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  width: 100%;
+}
+
+.brand-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+.logo-box {
+  background: linear-gradient(135deg, var(--primary) 0%, #60a5fa 100%);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  transition: var(--transition);
+}
+
+.brand-zone h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1;
+}
+
+.brand-zone h1 span {
+  color: var(--primary);
+}
+
+.badge {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 32px auto; 
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. THEME SELECTOR SYSTEM CONTROLS
+   ========================================================================== */
+.theme-switcher-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
+.theme-switcher-wrapper select {
+  width: auto; /* Dynamic auto-sizing based on active character layouts */
+  min-width: 140px; /* Safety container baseline */
+  max-width: 100%;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+  /* Balanced right padding to leave clearance for longer option titles */
+  padding: 10px 32px 10px 38px; 
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none; 
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* .theme-switcher-wrapper select {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 24px 10px 38px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none; 
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-switcher-wrapper select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+} */
+
+/* ==========================================================================
+   5. WORKSPACE FIELDS & FILTER BUTTON TRACKS
+   ========================================================================== */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 32px auto;
+}
+
+.field-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.input-container input {
+    width: 100%;
+    background-color: var(--bg-input);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 18px 56px 18px 56px;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-container input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 5px var(--primary-glow);
+}
+
+.input-container input:focus ~ .field-icon {
+    color: var(--primary) !important;
+}
+
+#clearBtn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.35rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+#clearBtn.visible {
+    opacity: 0.7;
+    pointer-events: auto;
+}
+
+#clearBtn:hover {
+    color: #ef4444;
+    opacity: 1;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 8px 4px;
+    scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--text-main);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 4px 14px var(--primary-glow);
+}
+/* ==========================================================================
+   6. MASONRY DISPLAY GRID MODULES
+   ========================================================================== */ 
+.grid-display-zone {
+flex-grow: 1;
+margin-top: 20px;
+}
+.font-masonry-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+gap: 24px;
+width: 100%;
+}
+.font-card {
+background-color: var(--bg-card);
+border: 2px solid var(--border-color);
+border-radius: var(--radius-lg);
+padding: 24px;
+text-align: left;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+position: relative;
+overflow: hidden;
+transition: var(--transition);
+}
+.font-card:hover {
+transform: translateY(-4px);
+border-color: var(--primary);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--primary);
+}
+.card-header-info {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+padding-bottom: 12px;
+}
+.font-label {
+font-size: 0.8rem;
+font-weight: 800;
+color: var(--label-color); /* Linked onto global modular theme architecture */
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: var(--transition);
+}
+.copy-badge {
+font-size: 0.85rem;
+color: var(--text-muted);
+opacity: 0;
+transform: translateX(6px);
+transition: var(--transition);
+}
+.font-card:hover .copy-badge {
+opacity: 1;
+transform: translateX(0);
+color: var(--primary);
+}
+.output-string {
+font-size: 1.4rem;
+color: var(--text-main);
+word-break: break-word;
+white-space: pre-wrap;
+margin-top: auto;
+font-weight: 500;
+transition: color 0.2s ease;
+}
+.font-card.placeholder-active .output-string {
+color: rgba(148, 163, 184, 0.3) !important;
+font-style: italic;
+}
+/* ==========================================================================
+7. NEON THEME COMPONENT OVERRIDES
+========================================================================== */
+body[data-theme^="neon"] .font-card {
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 0 0 6px var(--primary-glow);
+}
+body[data-theme^="neon"] .font-card:hover {
+box-shadow: 0 0 15px var(--primary-glow), inset 0 0 10px var(--primary-glow);
+}
+body[data-theme^="neon"] .font-label {
+text-shadow: 0 0 4px var(--primary-glow);
+}
+body[data-theme^="neon"] .filter-btn:not(.active) {
+background-color: #050505;
+border-color: #1a1a1a;
+}
+/* ==========================================================================
+8. RUNTIME NOTIFICATIONS & TRANSITIONS
+========================================================================== */
+.toast-wrapper {
+position: fixed;
+bottom: 32px;
+right: 32px;
+z-index: 10000;
+display: flex;
+flex-direction: column;
+gap: 12px;
+pointer-events: none;
+}
+.toast-alert {
+background-color: #065f46;
+border: 1px solid var(--success);
+color: #ecfdf5;
+padding: 14px 24px;
+border-radius: var(--radius-md);
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+pointer-events: auto;
+animation: slideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.25) forwards;
+}
+@keyframes slideIn {
+from { opacity: 0; transform: translateY(20px) scale(0.95); }
+to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.app-footer {
+text-align: center;
+padding-top: 60px;
+color: rgba(148, 163, 184, 0.3);
+font-size: 0.85rem;
+font-weight: 600;
+}
+/* ==========================================================================
+9. DEVICE MEDIA BREAKPOINTS (Responsive Integration)
+========================================================================== */
+/* Tablet Interfaces (968px and down) */
+@media (max-width: 968px) {
+.brand-zone h1 { font-size: 2.2rem; }
+.font-masonry-grid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+}
+/* Mobile Environments (768px and down) */
+/* Mobile Environments (768px and down) */
+@media (max-width: 768px) {
+  .app-layout { padding: 24px 16px; }
+  .brand-zone { flex-direction: column; gap: 12px; }
+  .theme-switcher-wrapper { margin-left: 0; width: 100%; max-width: 240px; justify-content: center; }
+  
+  /* Overrides auto-width on mobile viewports so it fills the header row beautifully */
+.theme-switcher-wrapper select { 
+    width: 100% !important; 
+    text-align-last: center; /* Centers option labels on mobile browsers */
+  }
+  
+  .input-container input
+  {
+    padding: 16px 48px;
+    font-size: 1.05rem;
+  }
+  
+.field-icon
+{
+  left: 16px;
+}
+  
+.filter-bar
+{
+  padding-bottom: 12px;
+}
+
+.font-masonry-grid
+{
+  grid-template-columns: 1fr;
+  gap: 16px;
+} 
+
+.toast-wrapper
+{
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+  
+.toast-alert
+{
+  justify-content: center;
+  }
+}

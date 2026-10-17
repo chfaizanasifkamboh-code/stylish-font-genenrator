@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instant serverless stylish text font generator. Copy and paste beautiful decorative fonts instantly.">
+  <meta name="keywords" content="font generator, cool fonts, aesthetic text, text transformer, font copy paste">
+  <meta name="author" content="Professional Font Dev">
+  <meta name="robots" content="index, follow">
+  
+  <title>Aesthetic Font Vault | Instant Stylish Text Generator</title>
+  
+  
+  <link rel="icon" href="assets/images/logo.png">
+  <!-- Google Fonts for sharp interface typography -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN for UI actions -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Core script stack modules -->
+  <script src="js/font-engine.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- DASHBOARD WRAPPER CONTAINER -->
+  <div class="app-layout">
+    
+    <!-- STICKY CONTROL CENTRE HEADER -->
+    <header class="app-header">
+      <div class="brand-zone">
+  <div class="logo-box">
+    
+    <i class="fa-solid fa-python"></i>
+  </div>
+  <h1>Font<span>Vault</span></h1>
+  <span class="badge">v1.0 - Zero Lag</span>
+
+<div class="theme-switcher-wrapper">
+  <label for="themeSelect" class="sr-only">Switch Website Theme</label>
+  <i class="fa-solid fa-palette theme-icon" aria-hidden="true"></i>
+  <select id="themeSelect" aria-label="Change interface theme mode">
+    <!-- Foundational Framework Themes -->
+    <option value="dark" selected>🌌 Dark Space</option>
+    <option value="light">☀️ Clean Light</option>
+    <option value="neon">⚡ Cyber Crimson (Red/Orange)</option>
+    
+    <!-- Professional Dual-Tone Neon Extensions -->
+    <option value="neon-aqua">💎 Tron Aqua (Aqua/Blue)</option>
+    <option value="neon-purple">🔮 Synth Purple (Purple/Magenta)</option>
+    <option value="neon-amber">☢️ Amber Terminal (Amber/Gold)</option>
+    <option value="neon-lime">🔋 Lime Matrix (Lime/Emerald)</option>
+    <option value="neon-hotred">🥵 Laser Red (Red/White)</option>
+    <option value="neon-hotpink" >🌸 Laser Pink (Pink/White)</option>
+    <option value="neon-electric">⚡ Electric Gold (Yellow/Blue)</option>
+    <option value="neon-coral">🔥 Solar Flare (Coral/Yellow)</option>
+    <option value="neon-miami">🌴 Miami Sunset (Teal/Pink)</option>
+    <option value="neon-glitch">👾 Toxic Alien (Green/Purple)</option>
+    <option value="neon-ice">❄️ Glacial Ice (Ice Blue/White)</option>
+    
+    <!-- Multi-Tone Spectrum Theme -->
+    <option value="neon-spectrum">🌈 Multi-Neon Spectrum</option>
+  </select>
+</div>
+
+
+
+      
+      <p class="tagline">Transform plain alphanumeric strings into decorative Unicode layouts instantly. Click any card to copy.</p>
+      
+      <!-- HERO TEXT INGESTION BAR -->
+      <div class="input-container">
+        <label for="fontInput" class="sr-only">Type your text here</label>
+        <i class="fa-solid fa-pen-nib field-icon"></i>
+        <input 
+          type="text" 
+          id="fontInput" 
+          maxlength="150" 
+          placeholder="Type something beautiful here..." 
+          autofocus 
+          autocomplete="off">
+        <button id="clearBtn" aria-label="Clear field entry" title="Clear field">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+
+      <!-- HORIZONTAL SEGMENTED CATEGORY FILTERS -->
+      <nav class="filter-bar" aria-label="Font categories menu">
+        <button class="filter-btn active" data-category="all">
+          <i class="fa-solid fa-border-all"></i> All Styles
+        </button>
+        <button class="filter-btn" data-category="classic">
+          <i class="fa-solid fa-book-bible"></i> Gothic
+        </button>
+        <button class="filter-btn" data-category="elegant">
+          <i class="fa-solid fa-signature"></i> Cursive
+        </button>
+        <button class="filter-btn" data-category="modern">
+          <i class="fa-solid fa-terminal"></i> Modern / Mono
+        </button>
+        <button class="filter-btn" data-category="creative">
+          <i class="fa-solid fa-icons"></i> Creative / Shapes
+        </button>
+        <button class="filter-btn" data-category="aesthetic">
+          <i class="fa-solid fa-wand-magic"></i> Aesthetic
+        </button>
+      </nav>
+    </header>
+
+    <!-- REACTIVE RENDERING INTERFACE GRID -->
+    <main class="grid-display-zone">
+      <!-- Empty grid target element dynamically populated by script.js -->
+      <div id="fontGrid" class="font-masonry-grid" aria-live="polite"></div>
+    </main>
+
+    <!-- ACCESSIBILITY RUNTIME NOTIFICATION SYSTEM (Toast) -->
+    <div id="toastContainer" class="toast-wrapper" role="alert" aria-live="assertive"></div>
+
+    <!-- MINIMALIST METRIC FOOTER -->
+    <footer class="app-footer">
+      <p>© 2026 FontVault Engine | 100% Client-Side Pure Web App Architecture.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
